@@ -1,16 +1,15 @@
 package model;
 
-import java.awt.Color;
 import java.time.LocalDate;
 
-public class Comic extends Periodical{
-    private boolean colored;
-    private boolean manga;
+public class Comic extends Periodical {
+    private final boolean colored;
+    private final boolean manga;
 
   
-    public Comic(String title, int numPages, Genre genre, LocalDate releaseDate, Color color,
+    public Comic(String title, int numPages, Genre genre, LocalDate releaseDate,
             PeriodicalFrequence periodicalFreqeunce, boolean colored, boolean manga) {
-        super(title, numPages, genre, releaseDate, color, periodicalFreqeunce);
+        super(title, numPages, genre, releaseDate, periodicalFreqeunce);
         this.colored = colored;
         this.manga = manga;
     }

@@ -1,6 +1,6 @@
 // Descrizione:
 // Si richiede di implementare un'applicazione Java per la gestione di una libreria.
-// Si devono utilizzare classi astratte per rappresentare sia i libri che gli autori, con metodi concreti per ottenere informazioni su di essi.
+// Si deve utilizzare una classe astratta per rappresentare libri e una concreta per gli autori, con metodi concreti per ottenere informazioni su di essi.
 // Gli autori devono avere un nome e una lista di libri associati, mentre i libri devono avere un titolo e uno stato che indica se sono in prestito o meno.
 // Si richiede inoltre l'implementazione di un'interfaccia Prestito che contenga i metodi prendiInPrestito() e restituisci(), con la possibilità di lanciare un'eccezione PrestitoException nel caso in cui un libro sia già in prestito.
 
@@ -27,10 +27,10 @@ public class Main {
     
     // Create your books here
     // Then display them
-    Journal p = new Journal("Bollettino economico", 10, Genre.ECONOMY, LocalDate.now(),Color.BLACK, PeriodicalFrequence.DAILY, "La gazzetta");
-    Journal p1 = new Journal("Bollettino sportivo", 10, Genre.SPORT, LocalDate.now(), Color.GREEN, PeriodicalFrequence.DAILY,"La gazzetta");
-    textDisplay.addText(p);
-    textDisplay.addText(p1);
+    Journal p = new Journal("Bollettino economico", 10, Genre.ECONOMY, LocalDate.now(), PeriodicalFrequence.DAILY, "La gazzetta");
+    Journal p1 = new Journal("Bollettino sportivo", 10, Genre.SPORT, LocalDate.now(), PeriodicalFrequence.DAILY,"La gazzetta");
+    textDisplay.addText(p, Color.BLACK);
+    textDisplay.addText(p1, Color.GREEN);
 
   }
 }

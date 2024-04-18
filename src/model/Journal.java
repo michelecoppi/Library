@@ -1,21 +1,20 @@
 package model;
 
-import java.awt.Color;
 import java.time.LocalDate;
 
-public class Journal extends Periodical{
-    private String editorialBoardName;
+public class Journal extends Periodical {
+    private final String researchTopic;
 
 
-    public Journal(String title, int numPages, Genre genre, LocalDate releaseDate, Color color,
-            PeriodicalFrequence periodicalFreqeunce, String editorialBoardName) {
-        super(title, numPages, genre, releaseDate, color, periodicalFreqeunce);
-        this.editorialBoardName = editorialBoardName;
+    public Journal(String title, int numPages, Genre genre, LocalDate releaseDate,
+            PeriodicalFrequence periodicalFreqeunce, String researchTopic) {
+        super(title, numPages, genre, releaseDate, periodicalFreqeunce);
+        this.researchTopic = researchTopic;
     }
 
 
-    public String getEditorialBoardName() {
-        return editorialBoardName;
+    public String getResearchTopic() {
+        return researchTopic;
     }
 
     

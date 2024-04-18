@@ -19,10 +19,10 @@ public class TextDisplay {
         frame.setVisible(true);
     }
 
-    public void addText(Text text) {
+    public void addText(Text text, Color boxColor) {
         JPanel textPanel = new JPanel(new GridBagLayout());
         textPanel.setLayout(new BoxLayout(textPanel, BoxLayout.Y_AXIS)); 
-        textPanel.setBorder(BorderFactory.createLineBorder(text.getCoverColor(), 2));
+        textPanel.setBorder(BorderFactory.createLineBorder(boxColor, 2));
     
         JLabel titleLabel = new JLabel("Title: " + text.getTitle());
         JLabel genreLabel = new JLabel("Genre: " + text.getGenre().name());
