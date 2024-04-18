@@ -13,9 +13,24 @@
 
 // Nota:
 // Assicurarsi di gestire correttamente tutte le operazioni relative al prestito dei libri, garantendo che non sia possibile prendere in prestito un libro già in prestito e che sia possibile restituirlo correttamente.
+import java.awt.Color;
+import java.time.LocalDate;
+
+import model.TextDisplay;
+import model.Genre;
+import model.Journal;
+import model.PeriodicalFrequence;
 
 public class Main {
   public static void main (String [] args){
+    TextDisplay textDisplay = new TextDisplay();
+    
+    // Create your books here
+    // Then display them
+    Journal p = new Journal("Bollettino economico", 10, Genre.ECONOMY, LocalDate.now(),Color.BLACK, PeriodicalFrequence.DAILY, "La gazzetta");
+    Journal p1 = new Journal("Bollettino sportivo", 10, Genre.SPORT, LocalDate.now(), Color.GREEN, PeriodicalFrequence.DAILY,"La gazzetta");
+    textDisplay.addText(p);
+    textDisplay.addText(p1);
 
   }
 }
